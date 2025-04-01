@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон -->
+  <circle cx="256" cy="256" r="256" fill="#ff9bac"/>
+  
+  <!-- Корпус камеры -->
+  <rect x="156" y="156" width="200" height="150" rx="20" fill="white"/>
+  
+  <!-- Объектив -->
+  <circle cx="256" cy="231" r="40" fill="#ff9bac"/>
+  <circle cx="256" cy="231" r="30" fill="white"/>
+  
+  <!-- Вспышка -->
+  <rect x="376" y="156" width="20" height="20" rx="4" fill="white"/>
+  
+  <!-- Кнопка -->
+  <circle cx="256" cy="356" r="15" fill="white"/>
+  
+  <!-- Ремешок -->
+  <path d="M156 206 L156 256" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <path d="M356 206 L356 256" stroke="white" stroke-width="8" stroke-linecap="round"/>
+</svg> 

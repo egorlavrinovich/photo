@@ -1,0 +1,29 @@
+.custom-button {
+    border-radius: 25px;
+    height: 48px;
+    padding: 0 24px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-button-primary {
+    background-color: #ff4d8d !important;
+    border-color: #ff4d8d !important;
+    color: white !important;
+}
+
+.custom-button-primary:hover {
+    background-color: #ff1a75 !important;
+    border-color: #ff1a75 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 77, 141, 0.4);
+}
+
+.button-icon {
+    font-size: 14px !important;
+    margin-right: 6px !important;
+    line-height: 1 !important;
+}

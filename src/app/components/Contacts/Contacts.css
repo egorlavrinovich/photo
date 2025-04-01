@@ -1,0 +1,41 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.phone,
+.instagram {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 2px 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #1A1A1A;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.phone:hover,
+.instagram:hover {
+    background-color: rgba(255, 155, 172, 0.1);
+    color: #ff9bac;
+}
+
+.phone.copied {
+    background-color: rgba(255, 155, 172, 0.2);
+    color: #ff9bac;
+}
+
+.phone {
+    font-size: medium;
+}
+
+.instagram {
+    font-size: small;
+}
+
+.instagram .anticon {
+    font-size: 16px;
+}
