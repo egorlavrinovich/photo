@@ -3,6 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ConfigProvider, App as AntApp } from 'antd';
 import theme from './theme/themeConfig';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -81,6 +85,8 @@ export default function RootLayout({
             {children}
           </AntApp>
         </ConfigProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
