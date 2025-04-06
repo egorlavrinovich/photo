@@ -25,20 +25,50 @@ export const OrderForm = ({ open, onClose }: OrderFormProps) => {
     const handleSubmit = async (values: OrderFormData) => {
         try {
             setLoading(true);
-            // Здесь будет запрос к API
-            await new Promise(resolve => setTimeout(resolve, 1000)); // Имитация запроса
 
-            messageApi.success({
-                content: 'Заказ успешно отправлен! Мы свяжемся с вами в ближайшее время.',
-                duration: 3,
-            });
-            form.resetFields();
-            onClose();
-        } catch (error) {
-            messageApi.error({
-                content: 'Произошла ошибка при отправке заказа. Пожалуйста, попробуйте позже.',
-                duration: 3,
-            });
+            const text = `
+            📌 Новый заказ:
+            👤 Имя: ${values.name}
+            📧 Email: ${values.email}
+            📞 Телефон: ${values.phone}
+            ℹ️ Доп. информация: ${values.additionalInfo || 'не указано'}
+          `;
+
+
+            try {
+                const response = await fetch(
+                    `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_BOT_TOKEN}/sendMessage`,
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
+                            text,
+                            parse_mode: 'Markdown',
+                        }),
+                    }
+                );
+
+                if (!response.ok) {
+                    throw new Error(`Telegram API error: ${response.status}`);
+                }
+
+                messageApi.success({
+                    content: 'Заказ успешно отправлен! Мы свяжемся с вами в ближайшее время.',
+                    duration: 3,
+                });
+                form.resetFields();
+                onClose();
+            } catch (error) {
+                messageApi.error({
+                    content: 'Произошла ошибка при отправке заказа. Пожалуйста, попробуйте позже.',
+                    duration: 3,
+                });
+            } finally {
+                setLoading(false);
+            }
         } finally {
             setLoading(false);
         }
@@ -71,10 +101,6 @@ export const OrderForm = ({ open, onClose }: OrderFormProps) => {
                     <Form.Item
                         name="email"
                         label="Email"
-                        rules={[
-                            { required: true, message: 'Пожалуйста, введите email' },
-                            { type: 'email', message: 'Пожалуйста, введите корректный email' }
-                        ]}
                     >
                         <Input placeholder="Введите ваш email" />
                     </Form.Item>
