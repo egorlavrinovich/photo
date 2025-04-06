@@ -1,42 +1,54 @@
 import React from 'react';
 import { SectionTitle } from '../common/SectionTitle';
-
+import Image from 'next/image';
 const galleryItems = [
     {
         id: 1,
-        title: 'Свадебная фотобудка',
+        title: 'Свадьба',
         description: 'Создайте незабываемые воспоминания на вашей свадьбе',
-        image: '/gallery/placeholder1.jpg'
+        image: '/wedding.webp',
+        width: 400,
+        height: 300
     },
     {
         id: 2,
-        title: 'Корпоративное мероприятие',
+        title: 'Корпоратив',
         description: 'Развлекательный элемент для вашего корпоратива',
-        image: '/gallery/placeholder2.jpg'
+        image: '/Corp.jpg',
+        width: 400,
+        height: 300
     },
     {
         id: 3,
         title: 'День рождения',
         description: 'Уникальное развлечение для гостей',
-        image: '/gallery/placeholder3.jpg'
+        image: '/Corp2.jpg',
+        width: 400,
+        height: 300
     },
     {
         id: 4,
         title: 'Выпускной',
         description: 'Запечатлите важный момент в жизни',
-        image: '/gallery/placeholder4.jpg'
+        image: '/school.jpg',
+        width: 400,
+        height: 300
     },
     {
         id: 5,
         title: 'Новый год',
         description: 'Создайте праздничное настроение',
-        image: '/gallery/placeholder5.jpg'
+        image: '/NY.jpg',
+        width: 350,
+        height: 320
     },
     {
         id: 6,
         title: 'Детский праздник',
         description: 'Весёлое развлечение для детей',
-        image: '/gallery/placeholder6.jpg'
+        image: '/childs.jpg',
+        width: 380,
+        height: 290
     }
 ];
 
@@ -47,13 +59,8 @@ export const GallerySection: React.FC = () => {
             <div className="gallery-grid">
                 {galleryItems.map((item) => (
                     <div key={item.id} className="gallery-item">
-                        <div className="gallery-image-placeholder">
-                            <span className="placeholder-text">{item.title}</span>
-                        </div>
-                        <div className="gallery-overlay">
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
-                        </div>
+                        <span className="placeholder-text">{item.title}</span>
+                        <Image src={item.image} alt={item.title} width={item.width} height={item.height} />
                     </div>
                 ))}
             </div>

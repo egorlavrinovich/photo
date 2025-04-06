@@ -154,7 +154,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    background-size: 200%;
+    background-size: 160%;
   }
 }
 
@@ -180,7 +180,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   body {
-    background-size: 55%;
+    background-size: 70%;
   }
 
   .mobile-menu-btn {
@@ -338,6 +338,16 @@ body {
 }
 
 .placeholder-text {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  font-size: x-large;
+  height: 7vh;
+  background-color: #ff4d8dc4;
   font-weight: 500;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -429,6 +439,13 @@ body {
   font-weight: bold;
   margin: 1rem 0;
   color: #ff4d8d;
+}
+
+.pricing-card .price-description {
+  font-size: 1rem;
+  color: #ff4d8d;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .pricing-card ul {
