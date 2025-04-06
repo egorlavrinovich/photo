@@ -33,16 +33,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Аренда фотобудки в Бресте | Фотокабина для мероприятий',
     description: 'Аренда фотобудки в Бресте для свадеб и праздников. Мгновенная печать фото, цифровая копия, стильный реквизит.',
-    url: 'https://ваш-сайт.by',
+    url: 'https://photobudka-brest.ru',
     type: 'website',
     locale: 'ru_BY',
-    siteName: 'PhotoBooth Брест',
+    siteName: 'Фотобудка Брест ',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'PhotoBooth Брест - Аренда фотобудки',
+        alt: 'Фотобудка Брест - Аренда фотобудки',
       },
     ],
   },
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     yandex: 'yandex-verification-code', // Замените
   },
   alternates: {
-    canonical: 'https://ваш-сайт.by', // Замените
+    canonical: 'https://photobudka-brest.ru', // Замените
   },
 };
 
