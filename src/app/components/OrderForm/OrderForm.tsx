@@ -1,4 +1,3 @@
-'use client';
 
 import { Modal, Form, Input, Checkbox, message } from 'antd';
 import { useState } from 'react';

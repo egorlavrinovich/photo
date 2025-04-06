@@ -1,4 +1,3 @@
-'use client';
 
 import { Layout } from 'antd';
 import { PhoneOutlined, InstagramOutlined, EnvironmentOutlined, ClockCircleOutlined } from '@ant-design/icons';

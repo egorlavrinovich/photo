@@ -1,4 +1,3 @@
-'use client';
 
 import { Button, Drawer } from 'antd';
 import { MenuOutlined, ShoppingCartOutlined } from '@ant-design/icons';
